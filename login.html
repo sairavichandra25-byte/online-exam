@@ -1,0 +1,46 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Exam - Login</title>
+</head>
+
+<body>
+
+    <h1>Online Examination</h1>
+
+    <form onsubmit="login(); return false;">
+
+        Username:
+        <input type="text" id="username" required>
+        <br><br>
+
+        Password:
+        <input type="password" id="password" required>
+        <br><br>
+
+        <input type="submit" value="Login">
+
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function login() {
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username == "student" && password == "1234") {
+                window.location.href = "index.html";
+            }
+            else {
+                document.getElementById("message").innerHTML =
+                    "Invalid username or password";
+            }
+        }
+    </script>
+
+</body>
+</html>
+```
